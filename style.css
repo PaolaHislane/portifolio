@@ -179,7 +179,7 @@ footer {
     width: 80%;
 }
 .certificado.active img {
-    max-width: 450px;  /* Defina a largura máxima que você deseja */
+     max-width: 1200px;  /* Defina a largura máxima que você deseja */
     height: auto;      /* A altura se ajusta automaticamente para manter a proporção */
     margin: 0 auto;    /* Garante que a imagem esteja centralizada */
 }
