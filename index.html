@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="respon.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#"><img src="/img/logo.png" alt="logo"></a>
+            </div><!---logo-->
+            <ul>
+                <li class="nav"><a class="menup" href="#sobre">Sobre</a></li>
+                <li class="nav"><a class="menup" href="#linguagens">Linguagens</a></li>
+                <li class="nav"><a class="menup" href="#projetos">Projetos</a></li>
+                <li class="nav"><a class="menup" href="#certificados">Certificados</a></li>
+                <li class="nav"><a class="menup" href="https://api.whatsapp.com/send?phone=5561992532093"
+                        target="_blank">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="space"></div>
+        <div class="container">
+            <section id="sobre" class="section">
+                <h2>Sobre</h2>
+                <h1>
+                    <center>Olá, meu nome é Paola Hislane!</center>
+                </h1>
+                <p>
+                    <center>Sou programadora e apaixonada por tecnologia!</center>
+                </p>
+                <h2>Quem sou eu?</h2>
+                <p>Sou uma programadora dedicada, sempre em busca de novos desafios e formas de evoluir minhas
+                    habilidades. Com uma paixão por resolver problemas e criar soluções eficientes, trabalho com
+                    desenvolvimento de software, criando aplicações inovadoras e colaborando com equipes para
+                    transformar ideias em código.</p>
+            </section>
+
+            <section id="linguagens" class="section">
+                <h2>Linguagens</h2>
+                <div class="languages">
+                    <img src="/img/css.jpg" alt="Linguagem 3">
+                    <img src="/img/js.jpg" alt="Linguagem 1">
+                    <img src="/img/html.png" alt="Linguagem 2">
+                    <img src="/img/dados.png" alt="Linguagem 4">
+                </div>
+            </section>
+
+            <section id="projetos" class="section">
+                <h2>Projetos</h2>
+                <div class="projects">
+                    <a href="https://gh2cca.netlify.app/" target="_blank">
+                        <img src="/img/GH2.jpg" alt="Projeto 1">
+                    </a>
+                    <a href="https://corte-costura.netlify.app/" target="_blank">
+                        <img src="/img/corteecostura.jpg" alt="Projeto 2">
+                    </a>
+                    <a href="https://calculadoraimcc2.netlify.app/" target="_blank">
+                        <img src="/img/imc.jpg" alt="Projeto 3">
+                    </a>
+                    <a href="https://relogiotds.netlify.app" target="_blank">
+                        <img src="/img/relogio.png" alt="Projeto 4">
+                    </a>
+                    <a href="https://ecommercephhb2024.netlify.app" target="_blank">
+                        <img src="/img/caçaepesca.png" alt="Projeto 1">
+                    </a>
+                    <a href="https://cardlanches.netlify.app/" target="_blank">
+                        <img src="/img/larika.png" alt="Projeto 1">
+                    </a>
+                </div>
+            </section>
+
+            <section id="certificados" class="section">
+                <h2>Certificados</h2>
+                <div class="certificados-container">
+                    <div class="certificado active" id="certificado1">
+                        <img src="/img/CERTIFICADO IA.png" alt="Certificado 1" width="660px">
+                    </div>
+                    <div class="certificado" id="certificado2">
+                        <img src="/img/CERTIFICADO LGPD.jpg" alt="Certificado 2" width="660px">
+                    </div>
+                    <div class="certificado" id="certificado3">
+                        <img src="/img/CERTIFICADO SCRUM.jpg" alt="Certificado 3" width="660px">
+                    </div>
+
+                    <div class="certificados-nav">
+                        <button id="prevCertificado">Anterior</button>
+                        <button id="nextCertificado">Próximo</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="floating-photo">
+                <img src="/img/perfil.jpeg" alt="Minha foto">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Portfólio</p>
+    </footer>
+
+    <script>
+        let currentCertificado = 0;
+        const certificados = document.querySelectorAll('.certificado');
+        const prevButton = document.getElementById('prevCertificado');
+        const nextButton = document.getElementById('nextCertificado');
+
+        function showCertificado(index) {
+            // Esconde todos os certificados
+            certificados.forEach(cert => cert.classList.remove('active'));
+            // Mostra o certificado atual
+            certificados[index].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentCertificado = (currentCertificado > 0) ? currentCertificado - 1 : certificados.length - 1;
+            showCertificado(currentCertificado);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentCertificado = (currentCertificado < certificados.length - 1) ? currentCertificado + 1 : 0;
+            showCertificado(currentCertificado);
+        });
+
+        // Inicializa o primeiro certificado
+        showCertificado(currentCertificado);
+    </script>
+</body>
+
+</html>

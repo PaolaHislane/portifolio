@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+#sobre, #linguagens, #certificados, #projetos{
+scroll-margin-top: 250px;
+}
+
+header {
+    position: fixed;
+    background-color: #4CAF50;
+    width: 100%;
+    height: 200px;
+    color: white;
+    padding: 1.0rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px; 
+    z-index: 100;
+}
+
+#txt-principal p span {
+    color: rgb(120, 120, 120);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 25px;
+    width: 100%;    
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly; /* Centers logo and nav items */
+    align-items: center; /* Vertically align items */
+    background: #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px; /* Add some padding for spacing */
+    height: 150px;
+
+}
+
+/* Styling for the logo */
+#logo img {
+    max-height: 200px; /* Limit the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the navigation list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Styling for each navigation item */
+.nav {
+    margin-left: 20px;
+}
+
+.nav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.nav a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Hover effect for the WhatsApp link to differentiate it */
+.nav a.whatsapp:hover {
+    background-color: #25D366; /* WhatsApp brand color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 250px;
+}
+
+.section {
+    margin-bottom: 60px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.languages, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.languages img, .projects img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 3px solid #4CAF50;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.languages img:hover, .projects img:hover {
+    transform: scale(1.1);
+}
+
+.floating-photo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: float 3s infinite ease-in-out;
+}
+
+.floating-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: white;
+}
+
+#certificados {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificados-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.certificado {
+    display: none;
+}
+
+.certificado.active {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.certificado.active img {
+    max-width: 450px;  /* Defina a largura máxima que você deseja */
+    height: auto;      /* A altura se ajusta automaticamente para manter a proporção */
+    margin: 0 auto;    /* Garante que a imagem esteja centralizada */
+}
+
+.certificados-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.certificados-nav button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.certificados-nav button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
